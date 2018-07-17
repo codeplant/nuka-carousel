@@ -67,9 +67,12 @@ export default class ScrollTransition extends React.Component {
       ? this.props.top
       : this.props.left;
     return React.Children.map(children, (child, index) => {
+      const className = `slider-slide ${
+        index === this.props.currentSlide ? 'active' : ''
+      }`;
       return (
         <li
-          className="slider-slide"
+          className={className}
           style={this.getSlideStyles(index, positionValue)}
           key={index}
         >

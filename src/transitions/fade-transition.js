@@ -9,9 +9,12 @@ export default class FadeTransition extends React.Component {
 
   formatChildren(children, opacity) {
     return React.Children.map(children, (child, index) => {
+      const className = `slider-slide ${
+        index === this.props.currentSlide ? 'active' : ''
+      }`;
       return (
         <li
-          className="slider-slide"
+          className={className}
           style={this.getSlideStyles(index, opacity)}
           key={index}
         >
