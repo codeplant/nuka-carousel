@@ -85,8 +85,9 @@ function (_React$Component) {
 
       var positionValue = this.props.vertical ? this.props.top : this.props.left;
       return React.Children.map(children, function (child, index) {
+        var className = "slider-slide ".concat(index === _this2.props.currentSlide ? 'active' : '');
         return React.createElement("li", {
-          className: "slider-slide",
+          className: className,
           style: _this2.getSlideStyles(index, positionValue),
           key: index
         }, child);

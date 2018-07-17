@@ -40,8 +40,9 @@ function (_React$Component) {
       var _this2 = this;
 
       return React.Children.map(children, function (child, index) {
+        var className = "slider-slide ".concat(index === _this2.props.currentSlide ? 'active' : '');
         return React.createElement("li", {
-          className: "slider-slide",
+          className: className,
           style: _this2.getSlideStyles(index, opacity),
           key: index
         }, child);
