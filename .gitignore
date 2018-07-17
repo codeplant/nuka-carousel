@@ -30,7 +30,7 @@ $RECYCLE.BIN/
 node_modules/
 bower_components/
 .tmp
-dist
-es
-lib
+#dist
+#es
+#lib
 yarn-error.log*
